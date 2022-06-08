@@ -4,8 +4,16 @@
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <el-config-provider>
+    <router-link to="/"> Home </router-link>
+    <router-link to="/about"> About </router-link>
+
+    <router-view v-slot="{ Component, route }">
+      <keep-alive>
+        <component :is="Component" :key="route.meta.usePathKey ? route.path : undefined" />
+      </keep-alive>
+    </router-view>
+  </el-config-provider>
 </template>
 
 <style>

@@ -20,11 +20,13 @@ specifiers:
   unplugin-vue-components: ^0.19.6
   vite: ^2.9.10
   vue: ^3.2.37
+  vue-router: ^4.0.15
   vue-tsc: ^0.37.3
 
 dependencies:
   element-plus: 2.2.5_vue@3.2.37
   vue: 3.2.37
+  vue-router: 4.0.15_vue@3.2.37
 
 devDependencies:
   '@rushstack/eslint-patch': 1.1.3
@@ -734,6 +736,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.37
       '@vue/shared': 3.2.37
+
+  /@vue/devtools-api/6.1.4:
+    resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
+    dev: false
 
   /@vue/eslint-config-prettier/7.0.0_eslint@8.17.0+prettier@2.6.2:
     resolution: {integrity: sha512-/CTc6ML3Wta1tCe1gUeO0EYnVXfo3nJXsIhZ8WJr3sov+cGASr6yuiibJTL6lmIBm7GobopToOuB3B6AWyV0Iw==}
@@ -2743,6 +2749,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-router/4.0.15_vue@3.2.37:
+    resolution: {integrity: sha512-xa+pIN9ZqORdIW1MkN2+d9Ui2pCM1b/UMgwYUCZOiFYHAvz/slKKBDha8DLrh5aCG/RibtrpyhKjKOZ85tYyWg==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.1.4
+      vue: 3.2.37
+    dev: false
 
   /vue-tsc/0.37.3_typescript@4.7.3:
     resolution: {integrity: sha512-MB8aU+9z722Q1tD/pg8ZKnkOSZI1yAlPYCA7R42B86XCUJ/w7fQtlI8Ojcgznz7IH3SxIkOVIw+S6TfddOa9gg==}
