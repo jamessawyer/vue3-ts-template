@@ -22,5 +22,6 @@ module.exports = {
     'no-console': OFF,
     'no-var': WARN,
     'prefer-const': ERROR,
+    'vue/multi-word-component-names': OFF,
   },
 }
