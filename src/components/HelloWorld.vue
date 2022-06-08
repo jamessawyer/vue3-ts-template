@@ -31,6 +31,7 @@ console.log(add(1, 2))
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  <el-button type="primary" plain>Primary</el-button>
 </template>
 
 <style scoped>
