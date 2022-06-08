@@ -4,6 +4,10 @@ import { ref } from 'vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+function add(a: number, b: number) {
+  return a + b
+}
+console.log(add(1, 2))
 </script>
 
 <template>
