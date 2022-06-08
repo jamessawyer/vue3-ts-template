@@ -16,9 +16,16 @@ const routes: Array<RouteRecordRaw> = [
   },
 ]
 
+const publicRoutes: Array<RouteRecordRaw> = [
+  {
+    path: '/login',
+    component: () => import('@/views/login/index.vue'),
+  },
+]
+
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: publicRoutes,
 })
 
 export default router
