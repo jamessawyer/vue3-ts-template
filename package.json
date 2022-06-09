@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "element-plus": "^2.2.5",
+    "pinia": "^2.0.14",
     "unplugin-icons": "^0.14.3",
     "vue": "^3.2.37",
     "vue-router": "^4.0.15"

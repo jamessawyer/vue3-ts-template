@@ -14,6 +14,7 @@ specifiers:
   eslint-plugin-vue: ^9.1.0
   husky: ^8.0.1
   lint-staged: ^13.0.0
+  pinia: ^2.0.14
   prettier: ^2.6.2
   sass: ^1.52.2
   typescript: ^4.7.3
@@ -28,6 +29,7 @@ specifiers:
 
 dependencies:
   element-plus: 2.2.5_vue@3.2.37
+  pinia: 2.0.14_typescript@4.7.3+vue@3.2.37
   unplugin-icons: 0.14.3_vite@2.9.10
   vue: 3.2.37
   vue-router: 4.0.15_vue@3.2.37
@@ -2304,6 +2306,24 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
     dev: true
+
+  /pinia/2.0.14_typescript@4.7.3+vue@3.2.37:
+    resolution: {integrity: sha512-0nPuZR4TetT/WcLN+feMSjWJku3SQU7dBbXC6uw+R6FLQJCsg+/0pzXyD82T1FmAYe0lsx+jnEDQ1BLgkRKlxA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.1.4
+      typescript: 4.7.3
+      vue: 3.2.37
+      vue-demi: 0.13.1_vue@3.2.37
+    dev: false
 
   /pkg-types/0.3.2:
     resolution: {integrity: sha512-eBYzX/7NYsQEOR2alWY4rnQB49G62oHzFpoi9Som56aUr8vB8UGcmcIia9v8fpBeuhH3Ltentuk2OGpp4IQV3Q==}

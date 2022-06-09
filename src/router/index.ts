@@ -21,6 +21,7 @@ const publicRoutes: Array<RouteRecordRaw> = [
     path: '/login',
     component: () => import('@/views/login/index.vue'),
   },
+  ...routes,
 ]
 
 const router = createRouter({
