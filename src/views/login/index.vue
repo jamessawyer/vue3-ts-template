@@ -32,12 +32,12 @@
           v-model="loginForm.password"
           placeholder="password"
           name="password"
+          :type="passwordType"
           tabindex="2"
           autocomplete="on"
-          type="text"
         />
-        <span class="show-pwd">
-          <svg-icon icon="eye-off-line"></svg-icon>
+        <span class="show-pwd" @click="onChangePwdType">
+          <svg-icon :icon="passwordType === 'password' ? 'eye-close' : 'eye-open'"></svg-icon>
         </span>
       </el-form-item>
 
@@ -72,6 +72,16 @@ const loginRules = ref<FormRules>({
     },
   ],
 })
+
+// 显示和隐藏密码
+const passwordType = ref('password')
+const onChangePwdType = () => {
+  if (passwordType.value === 'password') {
+    passwordType.value = 'text'
+  } else {
+    passwordType.value = 'password'
+  }
+}
 </script>
 
 <style lang="scss" scoped>
