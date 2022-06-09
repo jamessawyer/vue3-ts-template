@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <el-form class="login-form">
+    <el-form class="login-form" :model="loginForm" :rules="loginRules">
       <div class="title-container">
         <h3 class="title">用户登录</h3>
       </div>
@@ -15,8 +15,8 @@
           <svg-icon icon="user"></svg-icon>
         </span>
         <el-input
+          v-model="loginForm.username"
           placeholder="username"
-          :input-style="{ border: 'red' }"
           name="username"
           tabindex="1"
           autocomplete="on"
@@ -26,12 +26,16 @@
 
       <el-form-item prop="password">
         <span class="svg-container">
-          <!-- <el-icon>
-            <i-ep-avatar />
-          </el-icon> -->
           <svg-icon icon="lock"></svg-icon>
         </span>
-        <el-input placeholder="password" name="password" tabindex="2" autocomplete="on" type="text" />
+        <el-input
+          v-model="loginForm.password"
+          placeholder="password"
+          name="password"
+          tabindex="2"
+          autocomplete="on"
+          type="text"
+        />
         <span class="show-pwd">
           <svg-icon icon="eye-off-line"></svg-icon>
         </span>
@@ -42,7 +46,33 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import type { FormRules } from 'element-plus'
+import { validatePassword } from '@/utils/rules'
+
+const loginForm = ref({
+  username: 'super-admin',
+  password: '123456',
+})
+
+// 验证规则
+const loginRules = ref<FormRules>({
+  username: [
+    {
+      required: true,
+      trigger: 'blur',
+      message: '用户名不能为空',
+    },
+  ],
+  password: [
+    {
+      required: true,
+      trigger: 'blur',
+      validator: validatePassword(),
+    },
+  ],
+})
+</script>
 
 <style lang="scss" scoped>
 $bg: #2d3a4b;
