@@ -7,9 +7,12 @@
 
       <el-form-item prop="username">
         <span class="svg-container">
-          <el-icon>
+          <!-- <el-icon>
             <i-ep-avatar />
-          </el-icon>
+          </el-icon> -->
+
+          <!-- <svg-icon icon="https://res.lgdsunday.club/user.svg"></svg-icon> -->
+          <svg-icon icon="user"></svg-icon>
         </span>
         <el-input
           placeholder="username"
@@ -23,15 +26,14 @@
 
       <el-form-item prop="password">
         <span class="svg-container">
-          <el-icon>
+          <!-- <el-icon>
             <i-ep-avatar />
-          </el-icon>
+          </el-icon> -->
+          <svg-icon icon="lock"></svg-icon>
         </span>
         <el-input placeholder="password" name="password" tabindex="2" autocomplete="on" type="text" />
         <span class="show-pwd">
-          <el-icon>
-            <i-ep-avatar />
-          </el-icon>
+          <svg-icon icon="eye-off-line"></svg-icon>
         </span>
       </el-form-item>
 
@@ -40,7 +42,7 @@
   </div>
 </template>
 
-<script></script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped>
 $bg: #2d3a4b;
