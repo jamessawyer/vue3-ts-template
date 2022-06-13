@@ -1,7 +1,7 @@
 body {
   height: 100%;
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,11 +13,11 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 a:focus,
@@ -28,22 +28,22 @@ a:active {
 a,
 a:focus,
 a:hover {
-  cursor: pointer;
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
 }
 
-dev:focus {
+div:focus {
   outline: none;
 }
 
 .clearfix {
-  &:after {
-    visibility: hidden;
+  &::after {
     display: block;
-    font-size: 0;
-    content: ' ';
-    clear: both;
     height: 0;
+    clear: both;
+    content: ' ';
+    font-size: 0;
+    visibility: hidden;
   }
 }

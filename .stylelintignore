@@ -1,0 +1,12 @@
+node_modules
+dist/
+public/
+*.ts
+*.js
+*.json
+*.md
+
+.*ignore
+.*rc.js
+package.json
+pnpm*

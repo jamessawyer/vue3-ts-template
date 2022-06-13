@@ -86,80 +86,82 @@ const onChangePwdType = () => {
 
 <style lang="scss" scoped>
 $bg: #2d3a4b;
-$dark_gray: #899aa4;
-$light_gray: #eee;
+$dark-gray: #899aa4;
+$light-gray: #eee;
 $cursor: #fff;
 
 .login-container {
-  min-height: 100%;
-  width: 100%;
-  background-color: $bg;
   overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  background-color: $bg;
 
   .login-form {
     position: relative;
+    overflow: hidden;
     width: 520px;
     padding: 160px 25px 0;
     margin: 0 auto;
-    overflow: hidden;
 
     :deep(.el-form-item) {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background-color: rgba(0, 0, 0, 0.1);
+      border: 1px solid rgb(255 255 255 / 10%);
+      background-color: rgb(0 0 0 / 10%);
       border-radius: 5px;
       color: #454545;
     }
+
     :deep(.el-input) {
       display: inline-block;
-      height: 47px;
       width: 85%;
+      height: 47px;
 
       .el-input__wrapper {
         width: 100%;
         height: 100%;
         background: transparent;
+
         // 🚨 element 使用的 box-shadow 生成的border样式
         box-shadow: none;
       }
 
       input {
+        width: 100%;
+        padding: 12px 5px 12px 15px;
         border: none;
         background: transparent;
         border-radius: 0;
-        padding: 12px 5px 12px 15px;
-        color: $light_gray;
         caret-color: $cursor;
-        width: 100%;
+        color: $light-gray;
       }
     }
   }
 
   .svg-container {
-    padding: 10px 5px 6px 15px;
-    color: $dark_gray;
-    vertical-align: middle;
     display: inline-block;
+    padding: 10px 5px 6px 15px;
+    color: $dark-gray;
+    vertical-align: middle;
   }
 
   .title-container {
     position: relative;
 
     .title {
+      margin: 0 auto 40px;
+      color: $light-gray;
       font-size: 26px;
-      color: $light_gray;
-      margin: 0 auto 40px auto;
-      text-align: center;
       font-weight: bold;
+      text-align: center;
     }
   }
 
   .show-pwd {
     position: absolute;
-    right: 10px;
     top: 10px;
-    font-size: 16px;
-    color: $dark_gray;
+    right: 10px;
+    color: $dark-gray;
     cursor: pointer;
+    font-size: 16px;
     user-select: none;
   }
 }

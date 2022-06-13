@@ -37,17 +37,16 @@ const symbolId = computed(() => `#${props.prefix}-${props.icon}`)
 
 <style lang="scss" scoped>
 .svg-icon {
+  overflow: hidden;
   width: 1em;
   height: 1em;
+  fill: currentcolor;
   vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
 }
 
 .svg-external-icon {
-  background-color: currentColor;
-  mask-size: cover !important;
-  -webkit-mask-size: cover !important;
   display: inline-block;
+  background-color: currentcolor;
+  mask-size: cover !important;
 }
 </style>

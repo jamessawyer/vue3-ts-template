@@ -6,6 +6,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
+  "stylelint.validate": ["vue", "css", "scss", "sass", "less", "postcss"],
   "eslint.validate": ["javascript", "javascriptreact", "typescript"],
   "eslint.alwaysShowStatus": true
 }
